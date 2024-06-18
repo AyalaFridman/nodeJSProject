@@ -1,16 +1,22 @@
+const express = require("express");
+const controller = require("../Help_requestController.js");
+const router = express.Router();
 
-const express=require('express');
-const controller=require('../Help_requestController.js');
-const router=express.Router();
 
-router.get('/',controller.getAll);
+router.get("/", controller.getAll);
 
-router.get('/:id',controller.getById);
+router.get("/filter", controller.filtering);
 
-router.post('/',controller.insert);
+router.get("/IVolunteer", controller.IVolunteer);
 
-router.put('/:id',controller.update);
+router.get("/:id", controller.getById);
 
-router.delete('/:id',controller.delete);
+router.post("/NewVolunteer/", controller.createNewVolunteer);
 
-module.exports=router;
+router.post("/", controller.insert);
+
+router.put("/:id", controller.update);
+
+router.delete("/:id", controller.delete);
+
+module.exports = router;

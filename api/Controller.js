@@ -8,7 +8,7 @@ class Controller {
   }
   async getAll(req, res, next) {
     try {
-      console.log(req.query);
+      console.log("in get all");
       const result = await this.service.getAll(req.query);
 
       return res.json(result);

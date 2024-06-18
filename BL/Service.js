@@ -29,8 +29,9 @@ class Service {
 
   async insert(data) {
     try {
+      const l=await this.repo.getAll({});
+      data.id=l.length;
       const item = await this.repo.insert(data);
-
       if (item) {
         // return new HttpResponse(item);
         return item;

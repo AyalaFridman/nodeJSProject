@@ -1,7 +1,7 @@
 const mongoose=require('mongoose');
 const help_requestSchema=new mongoose.Schema({
 
-    // _id:Int32Array,
+    id:Number,
     location:Number,
     problem:String,
     phone:String,

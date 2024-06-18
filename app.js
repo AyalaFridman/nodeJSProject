@@ -22,21 +22,4 @@ app.listen(port, () => {
   console.log(`http://${host}:${port}`);
 });
 
-// const mongoose = require('mongoose');
 
-// // התחבר למסד הנתונים
-// mongoose.connect("mongodb+srv://AyalaF:a0556702870@cluster0.dzeengw.mongodb.net/");
-
-// // קבל את קישור ההתחברות
-// const db = mongoose.connection;
-
-// // אירוע התחברות למסד הנתונים
-// db.once('open', async () => {
-//     // קבל את שמות הטבלאות
-//     const collections = await db.db.listCollections().toArray();
-    
-//     // הדפס את שמות הטבלאות ב-console
-//     collections.forEach(collection => {
-//         console.log(collection.name);
-//     });
-// });
